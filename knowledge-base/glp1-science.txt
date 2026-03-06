@@ -1,0 +1,36 @@
+TOPIC: How GLP-1 Medications Work — The Science
+
+GLP-1 stands for glucagon-like peptide-1, a hormone naturally produced by cells in the small intestine in response to eating. GLP-1 receptor agonists are medications that mimic or enhance the action of this hormone. Understanding how they work helps explain both their effectiveness and their side effect profile.
+
+THE NATURAL GLP-1 HORMONE:
+When you eat, your intestines release GLP-1 into the bloodstream. This hormone signals to multiple organs simultaneously:
+- It stimulates the pancreas to release insulin, lowering blood sugar
+- It suppresses glucagon release, preventing the liver from releasing excess sugar
+- It slows gastric emptying — the rate at which food moves from the stomach to the intestine
+- It signals the brain, particularly the hypothalamus, to reduce appetite and increase feelings of fullness
+
+The problem is that natural GLP-1 is broken down very quickly — within minutes — by an enzyme called DPP-4. GLP-1 receptor agonist medications are engineered to resist this breakdown and produce a prolonged, sustained effect.
+
+HOW SEMAGLUTIDE (WEGOVY) WORKS:
+Semaglutide is structurally similar to natural GLP-1 but has been modified to bind to albumin in the blood, dramatically extending its half-life. A single weekly injection maintains therapeutic levels in the bloodstream throughout the week. It activates GLP-1 receptors in the pancreas, brain, stomach, and liver, producing appetite suppression, reduced food intake, and improved blood sugar regulation.
+
+HOW TIRZEPATIDE (MOUNJARO) WORKS:
+Tirzepatide is a dual agonist — it activates both GLP-1 receptors and GIP (glucose-dependent insulinotropic polypeptide) receptors. GIP is another incretin hormone that enhances insulin secretion and may play a role in fat metabolism. The combined activation of both receptor types appears to produce additive or synergistic effects, resulting in greater average weight loss than GLP-1-only medications in clinical trials.
+
+EFFECTS ON THE BRAIN:
+GLP-1 receptors are present throughout the central nervous system, including areas involved in reward and motivation. Activation of these receptors reduces the rewarding sensation associated with food, meaning patients often report thinking about food less, feeling satisfied with smaller portions, and experiencing reduced cravings — including for high-fat and high-sugar foods.
+
+EFFECTS ON THE STOMACH:
+GLP-1 slows peristalsis — the muscular contractions that move food through the digestive system. This delayed gastric emptying means the stomach stays full for longer, extending the feeling of satiety after a meal. This mechanism also explains the most common side effect: nausea, particularly during the early weeks of treatment.
+
+EFFECTS ON BLOOD SUGAR:
+GLP-1 medications improve insulin sensitivity and stimulate insulin release in a glucose-dependent manner — meaning they only trigger insulin when blood sugar is elevated. This makes dangerous hypoglycaemia rare when used alone, unlike some older diabetes medications.
+
+CARDIOVASCULAR AND METABOLIC BENEFITS:
+Beyond weight loss, GLP-1 receptor agonists have demonstrated measurable benefits in clinical trials including:
+- Reduction in LDL cholesterol and triglycerides
+- Lowering of blood pressure
+- Reduction in CRP (C-reactive protein), a marker of systemic inflammation
+- Reduction in liver fat content and improvement in ALT levels in patients with metabolic dysfunction
+- A 12% reduction in risk of stroke, heart attack, or cardiovascular death in high-risk patients
+- Potential renoprotective effects, slowing the decline of kidney function in patients with diabetic kidney disease

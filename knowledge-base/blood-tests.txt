@@ -1,0 +1,39 @@
+TOPIC: Blood Tests and the eMed Screening Process
+
+Before any GLP-1 medication can be prescribed, eMed requires all patients to complete a blood test. This is a non-negotiable part of the programme and cannot be substituted with results from an external provider or GP.
+
+WHY A BLOOD TEST IS REQUIRED:
+The blood test serves several important purposes:
+- It establishes a baseline health profile against which future progress can be measured
+- It identifies conditions or markers that may affect eligibility or medication choice
+- It allows the clinician to make a safe, informed prescribing decision
+- It ensures the programme is evidence-based and clinically responsible rather than simply dispensing medication without proper oversight
+
+WHAT IS TESTED:
+The eMed screening blood test typically measures:
+- HbA1c — a measure of average blood sugar over the past 2–3 months, used to identify diabetes or pre-diabetes
+- Fasting glucose — blood sugar levels in a fasted state
+- Full lipid profile — including total cholesterol, LDL, HDL, and triglycerides
+- Liver function tests (ALT, AST, ALP) — to assess liver health
+- Kidney function (eGFR, creatinine) — to assess renal health
+- Thyroid function (TSH) — as thyroid disorders can affect weight
+- Full blood count — to check for anaemia and other blood conditions
+- Vitamin D — deficiency is common and can affect metabolism and wellbeing
+
+HOW THE BLOOD TEST WORKS:
+eMed provides an at-home blood collection kit. The collection is supervised by a live virtual proctor — a trained eMed healthcare technician who joins a video call to guide the patient through the process in real time. The proctor ensures the sample is taken correctly, labelled properly, and ready to be returned by post.
+
+This live-proctored approach is central to eMed's model — it removes the need to visit a clinic or GP surgery while maintaining clinical standards.
+
+RESULTS AND CLINICIAN REVIEW:
+Once the lab has processed the sample, a licensed clinician reviews the results alongside the patient's health profile questionnaire. The clinician assesses:
+- Whether the patient meets the clinical criteria for GLP-1 medication
+- Which medication and starting dose is most appropriate
+- Whether any results indicate contraindications or require further investigation
+
+Patients are informed of their results and the clinician's decision. If a result requires follow-up — such as an unexpectedly high HbA1c suggesting undiagnosed diabetes — the clinician will advise on next steps.
+
+ONGOING MONITORING:
+Blood tests are not a one-off requirement. Patients on the eMed programme have regular blood work as part of their ongoing monitoring. This allows the clinical team to track improvements in metabolic markers such as HbA1c, cholesterol, and liver function, and to adjust the treatment plan accordingly.
+
+GLP-1 treatments have been shown to reduce HbA1c by approximately 1.0 to 1.5 percentage points in clinical trials, and to produce meaningful improvements in lipid profiles and liver fat content. The blood test results are the primary way eMed tracks these benefits objectively over time.

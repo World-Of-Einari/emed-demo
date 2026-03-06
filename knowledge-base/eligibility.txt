@@ -1,0 +1,32 @@
+TOPIC: Eligibility for the eMed Weight Management Programme
+
+Not everyone is automatically eligible for GLP-1 medication. eMed uses a combination of a health profile questionnaire, blood test results, and a clinician review to determine whether a patient is suitable for the programme and which medication is most appropriate.
+
+BMI CRITERIA:
+- A BMI of 30 or above qualifies as clinically obese and is the standard eligibility threshold.
+- A BMI of 27 or above may also qualify if the patient has one or more weight-related health conditions, such as type 2 diabetes, high blood pressure, high cholesterol, or sleep apnoea.
+- Patients below these BMI thresholds are not eligible for prescription GLP-1 medications through the eMed programme.
+
+AGE REQUIREMENTS:
+- Applicants must be aged 18 or over.
+- The programme is available up to the age of 75.
+- Patients outside this age range will not be accepted onto the programme.
+
+MEDICAL HISTORY REVIEW:
+A licensed clinician reviews each patient's full medical history before prescribing. Certain conditions or medications may affect eligibility. Patients are asked to disclose all current medications, as some — particularly insulin, sulfonylureas such as glipizide or glimepiride, and SGLT2 inhibitors — can interact with GLP-1 medications and affect blood sugar levels.
+
+CONDITIONS THAT MAY AFFECT ELIGIBILITY:
+- Personal or family history of medullary thyroid carcinoma (MTC)
+- Multiple Endocrine Neoplasia syndrome type 2 (MEN2)
+- History of pancreatitis
+- Severe gastrointestinal conditions
+- Pregnancy or breastfeeding
+- Severe renal impairment
+
+These conditions do not automatically disqualify a patient, but they require careful clinical assessment before a prescription can be issued.
+
+BLOOD TEST REQUIREMENT:
+All patients must complete an eMed blood test before being considered for the programme. eMed does not accept lab results from external providers. The blood test establishes a baseline health profile and is used to make safe, individualised prescribing decisions. The at-home collection is supervised by a live virtual proctor to ensure the sample is taken correctly.
+
+FINAL DECISION:
+The final eligibility decision rests with the licensed clinician who reviews your health profile and lab results. Meeting the BMI criteria does not guarantee a prescription — the clinician makes an independent clinical judgement based on your complete health picture.

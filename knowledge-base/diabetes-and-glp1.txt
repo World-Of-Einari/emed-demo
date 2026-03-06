@@ -1,0 +1,34 @@
+TOPIC: GLP-1 Medications and Type 2 Diabetes
+
+GLP-1 receptor agonists were first developed as treatments for type 2 diabetes, and their role in managing blood sugar remains highly relevant — even for patients using them primarily for weight loss.
+
+GLP-1 AND BLOOD SUGAR REGULATION:
+GLP-1 hormone plays a central role in blood sugar management. It stimulates the pancreas to release insulin in response to elevated blood sugar, and it suppresses glucagon (a hormone that causes the liver to release sugar into the bloodstream). Crucially, this effect is glucose-dependent — the medication only stimulates insulin release when blood sugar is high. This makes the risk of dangerous hypoglycaemia very low when the medication is used alone.
+
+BENEFITS FOR PATIENTS WITH TYPE 2 DIABETES:
+For patients with type 2 diabetes who are also overweight or obese, GLP-1 medications offer a dual benefit:
+- Significant weight loss, which itself improves insulin sensitivity and blood sugar control
+- Direct blood sugar lowering through GLP-1 receptor activation
+- HbA1c reductions of approximately 1.0 to 1.5 percentage points in clinical trials
+- Potential to reduce or eliminate the need for other diabetes medications (under clinician supervision)
+- Cardiovascular risk reduction, which is particularly important given the elevated cardiac risk in type 2 diabetes
+
+PATIENTS ALREADY TAKING DIABETES MEDICATIONS:
+Patients who are already taking diabetes medications must disclose all medications to their eMed clinician. Some diabetes medications interact with GLP-1 receptor agonists and may require dose adjustment:
+
+- Insulin: Taking GLP-1 medications alongside insulin increases the risk of hypoglycaemia. Insulin doses may need to be reduced when starting GLP-1 treatment.
+- Sulfonylureas (e.g. glipizide, glimepiride, glyburide): These medications stimulate insulin release independently and can combine with GLP-1 effects to cause low blood sugar.
+- SGLT2 inhibitors (e.g. empagliflozin, dapagliflozin): These are often used in combination with GLP-1 medications and generally have a complementary effect, but interactions should be monitored.
+- Metformin: Generally safe to use alongside GLP-1 medications with no significant interaction concerns.
+
+PRE-DIABETES:
+Patients with pre-diabetes (HbA1c between 42 and 47 mmol/mol, or fasting glucose between 6.1 and 6.9 mmol/L) may particularly benefit from the eMed programme. Weight loss of 5–10% of body weight has been shown to significantly reduce the risk of progression to type 2 diabetes, and GLP-1 medications have demonstrated the ability to reverse pre-diabetes in some patients.
+
+MONITORING DURING TREATMENT:
+Patients with diabetes or pre-diabetes are monitored more closely during the eMed programme. Blood sugar levels and HbA1c are tracked through the regular blood test schedule. Any significant changes to blood sugar control are reviewed by the clinician and medication adjustments made as needed.
+
+OZEMPIC AND RYBELSUS — WHAT IS THE DIFFERENCE:
+Ozempic contains the same active ingredient as Wegovy (semaglutide) but is licensed in the UK specifically for treating type 2 diabetes, not for weight management. It is available at lower doses than Wegovy. Rybelsus is an oral form of semaglutide, also licensed for type 2 diabetes. eMed prescribes Wegovy for weight management — not Ozempic — as Ozempic has not been approved by the MHRA or FDA for weight loss use.
+
+NHS ACCESS FOR DIABETIC PATIENTS:
+Patients with type 2 diabetes may be eligible for GLP-1 medications through the NHS, subject to clinical criteria and availability. Access through the NHS is subject to waiting lists and specific eligibility criteria. eMed operates as a private provider and offers a faster route with a structured support programme.

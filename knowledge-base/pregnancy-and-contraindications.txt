@@ -1,0 +1,35 @@
+TOPIC: Pregnancy, Breastfeeding, and GLP-1 Medications
+
+GLP-1 medications are not suitable for use during pregnancy or breastfeeding. This is an absolute contraindication — not a relative one — and patients must inform eMed and their clinician immediately if they become pregnant while on the programme.
+
+GLP-1 MEDICATIONS AND PREGNANCY:
+Current clinical guidance advises that GLP-1 receptor agonists should not be used during pregnancy. There is insufficient safety data from human studies to establish that these medications are safe for developing foetuses, and animal studies have shown some evidence of developmental harm at high doses.
+
+If you discover you are pregnant while taking a GLP-1 medication:
+1. Stop taking the medication immediately
+2. Contact eMed or your GP as soon as possible
+3. Inform your midwife or obstetrician at your earliest opportunity
+
+CONTRACEPTION DURING THE PROGRAMME:
+Patients of reproductive age who could become pregnant are advised to use effective contraception throughout the programme. This includes the period immediately before starting the medication, during treatment, and for a period after stopping — your clinician will advise on the recommended window based on the specific medication.
+
+There is an important consideration regarding oral contraceptives (the pill): GLP-1 medications slow gastric emptying, which may affect the absorption of oral medications, including combined oral contraceptives. Patients taking the pill should discuss this with their clinician, who may recommend using an additional or alternative form of contraception, particularly during the dose escalation phase.
+
+BREASTFEEDING:
+GLP-1 medications are not recommended during breastfeeding. It is not known whether semaglutide or tirzepatide passes into breast milk or what effect this might have on a nursing infant. Patients who are breastfeeding should not start the programme until they have stopped breastfeeding and this has been confirmed with their clinician.
+
+FERTILITY:
+Weight loss achieved through the eMed programme may improve fertility in patients with obesity-related fertility issues, including polycystic ovary syndrome (PCOS). PCOS is a common condition in which excess weight contributes to hormonal imbalance and irregular ovulation. Weight loss of 5–10% of body weight can significantly improve menstrual regularity and ovulatory function in patients with PCOS.
+
+Patients who are actively trying to conceive should discuss this with their clinician before starting the programme, as the interaction between improving fertility and the need to stop medication before conception requires careful timing.
+
+MENSTRUAL CHANGES:
+Some patients notice changes to their menstrual cycle during the early phase of the programme. These changes are typically related to the physiological effects of weight loss and caloric restriction rather than a direct effect of the medication. If menstrual changes are significant or concerning, speak to your clinician.
+
+OTHER ABSOLUTE CONTRAINDICATIONS:
+Beyond pregnancy and breastfeeding, GLP-1 medications should not be used in patients with:
+- Personal or family history of medullary thyroid carcinoma (MTC) — a specific type of thyroid cancer
+- Multiple Endocrine Neoplasia syndrome type 2 (MEN2) — a genetic condition associated with certain hormone-producing tumours
+- Known hypersensitivity to the active ingredient or any excipient in the formulation
+
+These contraindications are identified during the eligibility assessment and clinical review. Patients with these conditions will not be prescribed GLP-1 medications through the eMed programme.

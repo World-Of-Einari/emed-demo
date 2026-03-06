@@ -1,0 +1,60 @@
+TOPIC: Safety, Regulation, and Avoiding Counterfeit Medications
+
+Patient safety is central to eMed's approach. The company operates as a regulated provider and prescribes only MHRA-approved medications. This document explains the regulatory framework and the risks associated with unregulated sources.
+
+REGULATORY STATUS OF GLP-1 MEDICATIONS IN THE UK:
+All GLP-1 medications available through eMed are approved by the Medicines and Healthcare products Regulatory Agency (MHRA) — the UK medicines regulator — and are prescription-only medicines.
+
+Licensed GLP-1 medications available in the UK include:
+- Semaglutide — sold as Wegovy (for weight management) and Ozempic and Rybelsus (for type 2 diabetes)
+- Tirzepatide — sold as Mounjaro (for weight management and type 2 diabetes)
+- Liraglutide — sold under various brand names
+
+Being MHRA-licensed means these medications have undergone rigorous clinical testing to establish their safety and efficacy before receiving approval.
+
+PRESCRIPTION REQUIREMENT:
+All GLP-1 medications are prescription-only in the UK. This means:
+- A clinical consultation must take place before a prescription can be issued
+- The prescriber must assess the patient's suitability based on their health profile
+- Prescriptions cannot be issued without this assessment having been completed
+
+eMed's clinical assessment — including the health questionnaire, blood test, and clinician review — is designed to meet this requirement fully and responsibly.
+
+THE RISK OF COUNTERFEIT AND UNREGULATED PRODUCTS:
+There has been a significant increase in counterfeit and unregulated GLP-1 products sold online, through social media, and in beauty salons. These products pose serious health risks:
+
+Products to avoid:
+- Powders in vials that must be mixed with a liquid before injection — these are not authorised forms and pose significant safety risks
+- Products sold without a prior consultation with a healthcare professional
+- Products sourced from social media, unverified websites, or non-pharmacy retail outlets
+- Products claiming to be semaglutide or tirzepatide but lacking proper documentation, packaging, or verification
+
+Why counterfeit products are dangerous:
+- They may contain incorrect doses, wrong ingredients, or harmful contaminants
+- They have not undergone safety testing
+- There is no clinical oversight to detect adverse reactions
+- Severe side effects from fake GLP-1 medications have been reported to UK health authorities
+
+HOW TO VERIFY A LEGITIMATE PHARMACY:
+All UK pharmacies — including those operating online — must be registered with the General Pharmaceutical Council (GPhC). Patients can verify a pharmacy's registration on the GPhC website before ordering any medication. Northern Ireland pharmacies can be verified through the Pharmaceutical Society of Northern Ireland (PSNI).
+
+Legitimate GLP-1 medications are supplied exclusively in:
+- Pre-filled injection pens (not vials or loose powder)
+- Original manufacturer packaging with batch numbers and expiry dates
+- With a valid prescription from a licensed clinician
+
+EMED'S SAFETY STANDARDS:
+- All prescriptions are issued by licensed clinicians following a full clinical assessment
+- Only MHRA-approved, branded medications are supplied — not compounded or unlicensed versions
+- Medications are dispensed through regulated pharmacy partners
+- Ongoing clinical monitoring is provided to detect and manage any adverse effects
+- 24/7 side effect support is available to all active patients
+
+WHAT TO DO IF YOU SUSPECT A COUNTERFEIT PRODUCT:
+If you have purchased a GLP-1 medication from an unregulated source and are experiencing side effects or are concerned about the product's authenticity:
+- Stop taking the medication
+- Contact your GP or call NHS 111
+- Report the product to the MHRA via the Yellow Card scheme (yellowcard.mhra.gov.uk)
+
+EMED IS NOT A MEDICAL PROVIDER:
+eMed facilitates access to licensed clinicians who independently assess patients and make prescribing decisions. The clinical decisions are made by qualified healthcare professionals — eMed provides the platform, programme, and support infrastructure around those clinical interactions.
