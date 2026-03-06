@@ -1,0 +1,16 @@
+node_modules/
+.DS_Store
+dist/
+*.log
+
+.env
+.env.*
+!**/.env.example
+!**/*.env.example
+apps/server/env/server.env
+apps/mcp/env/mcp.env
+apps/mcp/build/
+
+.drizzle/
+
+apps/server/static/*.geojson
