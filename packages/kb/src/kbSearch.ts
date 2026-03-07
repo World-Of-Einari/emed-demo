@@ -1,27 +1,24 @@
 import "dotenv/config";
 import OpenAI from "openai";
-import { eq, isNotNull, sql } from "drizzle-orm";
-import { db } from "@emed/db-client";
-import { kbChunk, kbDocument } from "@emed/db";
+import { Client } from "@elastic/elasticsearch";
+
+export const ES_INDEX = "emed-kb";
 
 export type KbSearchResult = {
   chunkId: string;
   title: string;
   source: string;
   snippet: string;
-  cosineDistance: number;
+  score: number;
 };
 
-// NOTE:
-// Drizzle parameterizes arrays as records, which Postgres does not accept
-// for pgvector operators (<=>). We therefore inline a pgvector literal
-// ('[1,2,3]'::vector) to ensure the RHS is typed as vector.
-function toPgVectorLiteral(v: number[]) {
-  // Only numbers/commas/dots/minus – safe to inline as SQL literal
-  return `[${v.join(",")}]`;
-}
-
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+export function getEsClient(): Client {
+  const node = process.env.ELASTICSEARCH_URL ?? "http://localhost:9200";
+  const apiKey = process.env.ELASTICSEARCH_API_KEY;
+  return new Client(apiKey ? { node, auth: { apiKey } } : { node });
+}
 
 export async function kbSearch(query: string, topK = 5): Promise<KbSearchResult[]> {
   const emb = await openai.embeddings.create({
@@ -29,30 +26,34 @@ export async function kbSearch(query: string, topK = 5): Promise<KbSearchResult[
     input: query,
   });
 
-  const q = emb.data[0].embedding; // number[]
-  const qLiteral = toPgVectorLiteral(q);
+  const queryVector = emb.data[0].embedding;
+  const es = getEsClient();
 
-  const qVecSql = sql.raw(`'${qLiteral}'::vector`);
+  const response = await es.search({
+    index: ES_INDEX,
+    size: topK,
+    knn: {
+      field: "embedding",
+      query_vector: queryVector,
+      k: topK,
+      num_candidates: 50,
+    },
+    _source: ["chunkId", "title", "source", "content"],
+  });
 
-  const rows = await db
-    .select({
-      chunkId: kbChunk.id,
-      title: kbDocument.title,
-      source: kbDocument.source,
-      content: kbChunk.content,
-      cosineDistance: sql`${kbChunk.embedding} <=> ${qVecSql}`.as("cosineDistance"),
-    })
-    .from(kbChunk)
-    .innerJoin(kbDocument, eq(kbDocument.id, kbChunk.documentId))
-    .where(isNotNull(kbChunk.embedding))
-    .orderBy(sql`${kbChunk.embedding} <=> ${qVecSql}`)
-    .limit(topK);
-
-  return rows.map((r) => ({
-    chunkId: String(r.chunkId),
-    title: String(r.title),
-    source: String(r.source),
-    snippet: String(r.content).slice(0, 400),
-    cosineDistance: Number(r.cosineDistance),
-  }));
+  return response.hits.hits.map((hit) => {
+    const src = hit._source as {
+      chunkId: string;
+      title: string;
+      source: string;
+      content: string;
+    };
+    return {
+      chunkId: src.chunkId,
+      title: src.title,
+      source: src.source,
+      snippet: src.content.slice(0, 400),
+      score: hit._score ?? 0,
+    };
+  });
 }

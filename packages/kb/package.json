@@ -5,10 +5,8 @@
   "type": "module",
   "main": "./src/index.ts",
   "dependencies": {
-    "@emed/db": "workspace:^",
-    "@emed/db-client": "workspace:^",
+    "@elastic/elasticsearch": "^8.17.0",
     "dotenv": "^17.2.3",
-    "drizzle-orm": "^0.45.1",
     "openai": "^6.16.0"
   }
 }
