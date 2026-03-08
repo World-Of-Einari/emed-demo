@@ -1,9 +1,10 @@
 import OpenAI from "openai";
 import { toolRegistry, tools } from "./openai-tools/tool-registry";
 
-async function executeToolCalls(
-  toolCalls: OpenAI.Chat.ChatCompletionMessageToolCall[],
-): Promise<OpenAI.Chat.ChatCompletionToolMessageParam[]> {
+/**
+ * Executes a series of tool calls and returns their results.
+ */
+async function executeToolCalls(toolCalls: OpenAI.Chat.ChatCompletionMessageToolCall[]) {
   const results: OpenAI.Chat.ChatCompletionToolMessageParam[] = [];
   for (const tc of toolCalls) {
     if (tc.type !== "function") {
@@ -39,7 +40,14 @@ async function executeToolCalls(
 
 const MAX_TOOL_STEPS = 5;
 
-export async function runChat(messages: OpenAI.Chat.ChatCompletionMessageParam[], openai: OpenAI): Promise<string> {
+/**
+ * Runs a chat conversation with potential tool calls.
+ * The function will keep sending the conversation history to OpenAI until either the model stops or we reach MAX_TOOL_STEPS.
+ * @param messages
+ * @param openai
+ * @returns
+ */
+export async function runChat(messages: OpenAI.Chat.ChatCompletionMessageParam[], openai: OpenAI) {
   for (let step = 0; step < MAX_TOOL_STEPS; step++) {
     console.log(`[runChat] Step ${step + 1}/${MAX_TOOL_STEPS}, history length: ${messages.length}`);
 
