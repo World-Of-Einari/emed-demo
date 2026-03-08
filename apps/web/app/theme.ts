@@ -19,6 +19,17 @@ const theme = createTheme({
     fontFamily: "var(--font-roboto)",
     button: { textTransform: "none", fontWeight: 500 },
   },
+  components: {
+    MuiInput: {
+      styleOverrides: {
+        root: {
+          "&:before": { borderBottomColor: "rgba(0,0,0,0.2)" },
+          "&:hover:not(.Mui-disabled):before": { borderBottomColor: "rgba(0,0,0,0.4)" },
+          "&:after": { borderBottomColor: "#60243a" },
+        },
+      },
+    },
+  },
 });
 
 export default theme;
