@@ -14,12 +14,8 @@ export async function POST(req: Request) {
     return new Response("Message is required", { status: 400 });
   }
 
-  console.log(
-    `[POST /api/chat] message="${message.slice(0, 80)}${message.length > 80 ? "…" : ""}", history=${history.length}`,
-  );
-
   const sources = await kbSearch(message, 5);
-  console.log(`[POST /api/chat] kbSearch returned ${sources.length} sources`);
+  console.log(`[POST /api/chat] kbSearch returned ${sources?.length} sources`);
 
   const context = sources.map((s) => `[${s.title}]\n${s.snippet}`).join("\n\n---\n\n");
 
