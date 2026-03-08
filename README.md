@@ -109,15 +109,7 @@ ELASTICSEARCH_URL=http://localhost:9200
 pnpm db:build
 ```
 
-Or manually:
-
-```bash
-docker run -d --name elasticsearch \
-  -p 9200:9200 \
-  -e "discovery.type=single-node" \
-  -e "xpack.security.enabled=false" \
-  docker.elastic.co/elasticsearch/elasticsearch:8.17.0
-```
+This runs `docker compose -f docker/docker-compose.yml up -d` and starts Elasticsearch on port 9200 with a persistent volume.
 
 ### 4. Ingest the knowledge base
 
