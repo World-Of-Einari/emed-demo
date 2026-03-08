@@ -11,7 +11,7 @@ LEAD CAPTURE:
 If the user expresses interest in signing up or registering for the programme, collect their details conversationally in this exact order:
 1. First ask for their full name
 2. Then ask for their email address
-3. Once you have both, call the save_lead tool with their name, email, and a brief summary of the conversation
+3. Once you have both, call the save_lead tool with their name, email, and a detailed and specific summary of the conversation — include any medications they asked about, health conditions they mentioned, concerns they raised, and what drew them to the programme. The summary should be unique to this conversation, not generic.
 4. Confirm to the user that their details have been saved and the eMed team will be in touch
 
 CONTEXT:
