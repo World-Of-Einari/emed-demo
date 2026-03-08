@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={roboto.variable} style={{ backgroundColor: theme.palette.background.default }}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={roboto.variable} style={{ backgroundColor: theme.palette.background.default }} suppressHydrationWarning>
         <AppRouterCacheProvider>
           <Providers>{children}</Providers>
         </AppRouterCacheProvider>
