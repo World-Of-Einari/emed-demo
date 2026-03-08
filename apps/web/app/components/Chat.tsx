@@ -86,7 +86,6 @@ export function Chat() {
         display: "flex",
         justifyContent: "center",
         alignItems: "flex-start",
-        minHeight: "100vh",
         padding: "4rem 2rem",
         boxSizing: "border-box",
         bgcolor: "background.default",
@@ -98,18 +97,17 @@ export function Chat() {
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          padding: 3,
           height: "calc(100vh - 8rem)",
         }}
       >
         {/* Header */}
-        <Box sx={{ padding: 2, borderBottom: "1px solid", borderColor: "divider" }}>
+        <Box sx={{ padding: "1rem 2rem", borderBottom: "1px solid", borderColor: "divider" }}>
           <Typography variant="h2">eMed Assistant</Typography>
           <Typography variant="caption">Ask anything about the weight management programme</Typography>
         </Box>
 
         {/* Messages */}
-        <Box sx={{ flex: 1, overflowY: "auto", py: 2 }}>
+        <Box sx={{ flex: 1, overflowY: "auto", py: 2, padding: "2rem" }}>
           {messages.length === 0 && (
             <Typography variant="body2" color="text.secondary" sx={{ textAlign: "center", mt: 8 }}>
               Ask a question to get started
@@ -156,9 +154,9 @@ export function Chat() {
           sx={{
             display: "flex",
             gap: 2,
-            pt: 2,
             borderTop: "1px solid",
             borderColor: "divider",
+            padding: "1rem",
           }}
         >
           <TextField

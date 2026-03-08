@@ -15,8 +15,8 @@ export function TypingIndicator() {
         <Box
           key={i}
           sx={{
-            width: 7,
-            height: 7,
+            width: 6,
+            height: 6,
             borderRadius: "50%",
             bgcolor: "text.disabled",
             animation: `${bounce} 1.2s ease-in-out infinite`,
