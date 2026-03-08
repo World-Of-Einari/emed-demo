@@ -4,7 +4,7 @@ import path from "path";
 import crypto from "crypto";
 import OpenAI from "openai";
 import { Client } from "@elastic/elasticsearch";
-import { KB_INDEX } from "@emed/es";
+import { ensureKbIndex, KB_INDEX } from "@emed/es";
 
 const KNOWLEDGE_BASE_DIR = path.resolve("knowledge-base");
 const CHUNK_SIZE = 800; // characters per chunk
@@ -37,32 +37,8 @@ function titleFromFilename(filename: string): string {
     .join(" ");
 }
 
-async function ensureIndex() {
-  const exists = await es.indices.exists({ index: KB_INDEX });
-  if (!exists) {
-    await es.indices.create({
-      index: KB_INDEX,
-      mappings: {
-        properties: {
-          chunkId: { type: "keyword" },
-          title: { type: "text" },
-          source: { type: "keyword" },
-          content: { type: "text" },
-          embedding: {
-            type: "dense_vector",
-            dims: 1536,
-            index: true,
-            similarity: "cosine",
-          },
-        },
-      },
-    });
-    console.log(`Created index: ${KB_INDEX}`);
-  }
-}
-
-async function ingest() {
-  await ensureIndex();
+async function ingest(client: Client) {
+  await ensureKbIndex(client);
 
   const files = fs.readdirSync(KNOWLEDGE_BASE_DIR).filter((f) => f.endsWith(".txt"));
   console.log(`Found ${files.length} documents to ingest`);
@@ -86,7 +62,7 @@ async function ingest() {
 
       const embedding = embResponse.data[0].embedding;
 
-      await es.index({
+      await client.index({
         index: KB_INDEX,
         id: chunkId,
         document: { chunkId, title, source, content, embedding },
@@ -99,7 +75,7 @@ async function ingest() {
   console.log("\n\nIngestion complete.");
 }
 
-ingest().catch((err) => {
+ingest(es).catch((err) => {
   console.error(err);
   process.exit(1);
 });
