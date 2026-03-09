@@ -15,7 +15,7 @@ export const LeadsDrawer = () => {
 
   async function fetchLeads() {
     try {
-      const response = await fetch("/api/chat/leads");
+      const response = await fetch("/api/leads");
       const data = (await response.json()) as Lead[];
       setLeads(data);
     } catch (error) {
