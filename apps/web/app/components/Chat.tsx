@@ -173,7 +173,7 @@ export function Chat() {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && sendMessage()}
             placeholder="Ask about eligibility, medications, side effects..."
-            disabled={loading || !consented}
+            disabled={!consented}
             variant="standard"
             inputRef={inputRef}
           />
