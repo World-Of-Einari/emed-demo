@@ -9,7 +9,7 @@ export default function Page() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
-    <Box sx={{ display: "flex", height: "100vh"  }}>
+    <Box sx={{ display: "flex", height: "100vh" }}>
       <Box
         sx={{
           flex: 1,
