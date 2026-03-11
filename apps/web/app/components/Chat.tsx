@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useReducer } from "react";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
@@ -21,33 +21,71 @@ const fadeUp = keyframes`
   to   { opacity: 1; transform: translateY(0); }
 `;
 
+type State = {
+  messages: Message[];
+  input: string;
+  loading: boolean;
+  consented: boolean;
+};
+
+type Action =
+  | { type: "message_sent"; payload: string }
+  | { type: "message_received"; payload: string }
+  | { type: "message_failed" }
+  | { type: "input_changed"; payload: string }
+  | { type: "consented" };
+
+function reducer(state: State, action: Action): State {
+  switch (action.type) {
+    case "message_sent":
+      return {
+        ...state,
+        input: "",
+        loading: true,
+        messages: [...state.messages, { role: "user", content: action.payload }, { role: "assistant", content: "" }],
+      };
+    case "message_received": {
+      const messages = [...state.messages];
+      messages[messages.length - 1] = { role: "assistant", content: action.payload };
+      return { ...state, messages, loading: false };
+    }
+    case "message_failed": {
+      const messages = [...state.messages];
+      messages[messages.length - 1] = { role: "assistant", content: "Sorry, something went wrong. Please try again." };
+      return { ...state, messages, loading: false };
+    }
+    case "input_changed":
+      return { ...state, input: action.payload };
+    case "consented":
+      return { ...state, consented: true };
+  }
+}
+
 export function Chat() {
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [consented, setConsented] = useState(false);
+  const [s, dispatch] = useReducer(reducer, {
+    messages: [],
+    input: "",
+    loading: false,
+    consented: false,
+  });
 
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  }, [s.messages]);
 
   useEffect(() => {
-    if (!loading) inputRef.current?.focus();
-  }, [loading]);
+    if (!s.loading) inputRef.current?.focus();
+  }, [s.loading]);
 
   async function sendMessage() {
-    const message = input.trim();
-    if (!message || loading) return;
+    const message = s.input.trim();
+    if (!message || s.loading) return;
 
-    const history = messages.map(({ role, content }) => ({ role, content }));
-
-    setMessages((prev) => [...prev, { role: "user", content: message }]);
-    setInput("");
-    setLoading(true);
-    setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
+    const history = s.messages.map(({ role, content }) => ({ role, content }));
+    dispatch({ type: "message_sent", payload: message });
 
     try {
       const response = await fetch("/api/chat", {
@@ -56,35 +94,12 @@ export function Chat() {
         body: JSON.stringify({ message, history }),
       });
 
-      if (!response.ok || !response.body) throw new Error("Request failed");
+      if (!response.ok) throw new Error("Request failed");
 
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        const token = decoder.decode(value, { stream: true });
-        setMessages((prev) => {
-          const updated = [...prev];
-          updated[updated.length - 1] = {
-            role: "assistant",
-            content: updated[updated.length - 1].content + token,
-          };
-          return updated;
-        });
-      }
+      const reply = await response.text();
+      dispatch({ type: "message_received", payload: reply });
     } catch {
-      setMessages((prev) => {
-        const updated = [...prev];
-        updated[updated.length - 1] = {
-          role: "assistant",
-          content: "Sorry, something went wrong. Please try again.",
-        };
-        return updated;
-      });
-    } finally {
-      setLoading(false);
+      dispatch({ type: "message_failed" });
     }
   }
 
@@ -116,14 +131,14 @@ export function Chat() {
 
         {/* Messages */}
         <Box sx={{ flex: 1, overflowY: "auto", py: 2, padding: "2rem" }}>
-          {messages.length === 0 && (
+          {s.messages.length === 0 && (
             <Typography variant="body2" color="text.secondary" sx={{ textAlign: "center", mt: 8 }}>
               Ask a question to get started
             </Typography>
           )}
-          {messages.map((msg, i) => {
-            const isLast = i === messages.length - 1;
-            const showTyping = loading && isLast && msg.role === "assistant";
+          {s.messages.map((msg, i) => {
+            const isLast = i === s.messages.length - 1;
+            const showTyping = s.loading && isLast && msg.role === "assistant";
             return (
               <Box
                 key={i}
@@ -169,17 +184,17 @@ export function Chat() {
         >
           <TextField
             sx={{ flex: 1 }}
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+            value={s.input}
+            onChange={(e) => dispatch({ type: "input_changed", payload: e.target.value })}
             onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && sendMessage()}
             placeholder="Ask about eligibility, medications, side effects..."
-            disabled={!consented}
+            disabled={!s.consented}
             variant="standard"
             inputRef={inputRef}
           />
           <Button
             onClick={sendMessage}
-            disabled={loading || !input.trim() || !consented}
+            disabled={s.loading || !s.input.trim() || !s.consented}
             variant="contained"
             color="primary"
           >
@@ -187,7 +202,7 @@ export function Chat() {
           </Button>
         </Box>
       </Card>
-      <CookieBanner onConsent={() => setConsented(true)} />
+      <CookieBanner onConsent={() => dispatch({ type: "consented" })} />
     </Box>
   );
 }
