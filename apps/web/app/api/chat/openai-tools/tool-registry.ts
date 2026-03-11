@@ -57,6 +57,7 @@ export const toolRegistry: Record<string, ToolDefinition> = {
 
       const parsed = JSON.parse(text);
 
+      console.log("[tool-registry] listeners:", leadEvents.listenerCount(LEAD_SAVED_EVENT));
       leadEvents.emit(LEAD_SAVED_EVENT, parsed);
 
       return parsed;
