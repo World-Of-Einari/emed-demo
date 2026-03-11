@@ -2,8 +2,15 @@
 
 import { Box } from "@mui/system";
 import { Chat } from "./components/Chat";
-import { LeadsDrawer, DRAWER_WIDTH } from "./components/LeadsDrawer";
+
 import { useState } from "react";
+import { ErrorBoundary } from "./components/ErrorBoundary";
+import dynamic from "next/dynamic";
+import { DRAWER_WIDTH } from "./constants/drawer";
+
+const LeadsDrawer = dynamic(() => import("./components/LeadsDrawer").then((mod) => ({ default: mod.LeadsDrawer })), {
+  ssr: false,
+});
 
 export default function Page() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -17,7 +24,9 @@ export default function Page() {
           transition: "margin 0.3s ease",
         }}
       >
-        <Chat />
+        <ErrorBoundary>
+          <Chat />
+        </ErrorBoundary>
       </Box>
       <LeadsDrawer open={drawerOpen} onOpenChange={setDrawerOpen} />
     </Box>
