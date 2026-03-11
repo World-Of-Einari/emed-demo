@@ -3,8 +3,6 @@ import { leadEvents, LEAD_SAVED_EVENT } from "../lead-events";
 export const dynamic = "force-dynamic";
 
 export async function GET(req: Request) {
-  console.log("[GET /api/leads/stream] Client connected");
-
   const { readable, writable } = new TransformStream();
   const writer = writable.getWriter();
   const encoder = new TextEncoder();
@@ -25,6 +23,7 @@ export async function GET(req: Request) {
   };
 
   leadEvents.on(LEAD_SAVED_EVENT, onLead);
+  console.log("[GET /api/leads/stream] Subscribed, listeners now:", leadEvents.listenerCount(LEAD_SAVED_EVENT));
 
   req.signal.addEventListener("abort", () => {
     console.log("[GET /api/leads/stream] Client disconnected");
