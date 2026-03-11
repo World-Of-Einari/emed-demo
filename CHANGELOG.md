@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/World-Of-Einari/emed-demo/compare/v1.0.0...v1.0.1) (2026-03-11)
+
+
+### Bug Fixes
+
+* add GITLEAKS_LICENSE env var to gitleaks workflow ([40aaa17](https://github.com/World-Of-Einari/emed-demo/commit/40aaa17722c450e4dd97e6d795d4a88c930a6876))
+* add GITLEAKS_LICENSE to gitleaks workflow for org accounts ([15f2bb2](https://github.com/World-Of-Einari/emed-demo/commit/15f2bb2427427eb0d7be265d015ed6b9daa4e06b))
+
 ## 1.0.0 (2026-03-11)
 
 
